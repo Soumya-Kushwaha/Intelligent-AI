@@ -121,6 +121,13 @@ sns.boxplot(x='fuel_type',y='Price',data=car)
 ax=sns.relplot(x='company',y='Price',data=car,hue='fuel_type',size='year',height=7,aspect=2)
 ax.set_xticklabels(rotation=40,ha='right')
 
+### Plotting correlation matrix
+
+plt.figure(figsize=(15,15))
+correlation_matx = X.corr()
+sns.heatmap(correlation_matx,square=True,cmap="summer",annot=True,linewidth=0.5,fmt=".2f",cbar=False);
+plt.title("Correlation matrix",fontsize=20)
+
 ### Extracting Training Data
 
 X=car[['name','company','year','kms_driven','fuel_type']]
