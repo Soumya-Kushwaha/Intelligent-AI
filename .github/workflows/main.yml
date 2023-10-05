@@ -1,0 +1,35 @@
+name: Update README with Contributors
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Extract PR Author Information
+        id: extract_info
+        run: |
+          echo "::set-output name=username::${{ github.event.pull_request.user.login }}"
+          echo "::set-output name=profile::${{ github.event.pull_request.user.html_url }}"
+
+      - name: Update Contributors
+        run: |
+          USERNAME="${{ steps.extract_info.outputs.username }}"
+          GITHUB_PROFILE="${{ steps.extract_info.outputs.profile }}"
+          CONTRIBUTORS_SECTION="<!-- CONTRIBUTORS-LIST:START -->"
+          NEW_CONTRIBUTOR_ENTRY="\n- [$USERNAME]($GITHUB_PROFILE)"
+          LINE_NUMBER=$(grep -n "$CONTRIBUTORS_SECTION" README.md | cut -d':' -f1)
+          sed -i "$((LINE_NUMBER+1))i $NEW_CONTRIBUTOR_ENTRY" README.md
+          git config user.email "tomilolaoe1@gmail.com"
+          git config user.name "DevTomilola-OS"
+          git commit -am "Add $USERNAME as a contributor"
+          git push
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
