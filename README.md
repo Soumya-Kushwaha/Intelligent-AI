@@ -30,3 +30,7 @@ human, including recognizing and remembering emotions and reacting in social sit
 
 Now you can also start contributing to this revolution. You can upload your projects and documentation about Artificial intelligence, which will boost both your ideas and your confidence in contributing to open-source projects. You can contribute your awesome projects or your documentation. Start contributing today. :+1:
 
+## Contributors
+
+<!-- CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- CONTRIBUTORS-LIST:END -->
