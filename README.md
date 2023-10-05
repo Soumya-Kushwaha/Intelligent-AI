@@ -43,10 +43,3 @@ Steps for adding your name below
 ## Contributors
 
 - [@DevTomilola-OS](https://github.com/DevTomilola-OS)
-
-
-
-
-## Badges
-
-- [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
