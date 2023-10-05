@@ -29,4 +29,17 @@ human, including recognizing and remembering emotions and reacting in social sit
 <br><br>
 
 Now you can also start contributing to this revolution. You can upload your projects and documentation about Artificial intelligence, which will boost both your ideas and your confidence in contributing to open-source projects. You can contribute your awesome projects or your documentation. Start contributing today. :+1:
+---
 
+Steps for adding your name below
+
+    1. Fork this repo
+    2. Edit `README.md` file
+    3. Add your Name and github profile link to the Contributors section.
+    4. Make pull request
+
+
+
+## Contributors
+
+- [@DevTomilola-OS](https://github.com/DevTomilola-OS)
